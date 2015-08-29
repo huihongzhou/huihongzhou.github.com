@@ -3,6 +3,7 @@
     width: 100px;
     background: red;
 }
+
 @media handheld{
     .main{
         background: green;
