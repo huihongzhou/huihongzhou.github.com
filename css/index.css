@@ -6,14 +6,66 @@ body{
     background: rgba(0,0,0,0.5);
     position: absolute;
 }
+.content{
+    height: 580px;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    margin: -290px 0 0 -250px;
+    background: rgb(255,255,255);
+    position: absolute;
+    display: none;
+}
+.head{
+    height: 40px;
+}
+.foot{
+    height: 40px;
+}
+ol{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+}
+ol li{
+    float: left;   
+    height: 40px;
+    box-sizing: border-box;
+    border-left: 4px green solid;
+    line-height: 40px;
+    font-size: 24px;
+    text-align: center;
+}
+.head ol li:nth-of-type(1){
+    width:75%;
+}
+.head ol li:nth-of-type(2){
+    width:25%;
+}
+.foot ol li:nth-of-type(1){
+    width:55%;
+}
+.foot ol li:nth-of-type(2){
+    width:15%;
+}
+.foot ol li:nth-of-type(3){
+    width:15%;
+}
+.foot ol li:nth-of-type(4){
+    width:15%;
+}
+.foot a{
+    text-decoration: none;
+    color:black;
+    display: inline-block;
+    width: 100%;
+    height:100%;
+}
 .main{
     height: 500px;
     width: 500px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -250px 0 0 -250px;
-    background: rgb(255,255,255);
+    position: relative;
 }
 #roll{
     height: 50px;
@@ -99,4 +151,65 @@ body{
 .main ul li.c16{
     left:0px;
     top:100px;    
+}
+#gameend{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 500px;
+    height: 580px;
+    z-index:9;
+    background: rgba(0,0,0,0.7);
+    display: none;
+}
+#gameend dl,dt,dd{
+    padding: 0;
+    margin: 0;
+}
+#gameend dl{
+    height: 200px;
+    width: 100%;
+    padding: 140px 0 0 0;
+}
+#gameend dt,#gameend dd{
+    float: left;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+#gameend dt{
+    width:25%;
+    background: red;
+}
+#gameend dd{
+    width:75%;
+    background: blue;
+}
+#gameend .endbutton{
+    text-decoration: none;
+    display: block;
+    height: 100px;
+    line-height: 100px;
+    width: 100%;
+    text-align: center;
+}
+#gamepause{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 500px;
+    height: 580px;
+    z-index:99;
+   
+    display: none;
+}
+#gamepause .pausebutton{
+    display: block;
+    height: 300px;
+    width: 300px;
+    padding: 140px 100px;
+    background: rgba(0,0,0,0.7);
+    text-decoration: none;
+    line-height: 300px;
+    text-align: center;
 }
