@@ -16,13 +16,22 @@
             changeAngleText:10,
             angle:null,
             speedbool:false,
+            totaltime:0,
         },
-        init : function(){
+        init:function(){
 //            判断操作环境
-            if(!this.ismoblie()){
-                $("body").css("background","red");
-                return;
+            if(this.ismoblie()){
+                $(".startbutton a").click(function(event){
+                $(".profile").css("display","none");
+                $(".profile").css("z-index","-1");
+                $(".content").css("z-index","100");
+                this.initgame();
+                }.bind(this));
+            }else{
+                $(".profile .url").css("display","block");
             }
+        },
+        initgame : function(){
 //           初始小球           
             this.config.rollspeed = 5;
             this.config.jqobj.rollobj.css({
@@ -78,7 +87,12 @@
                 $(".foot a").off();
                 $("#gamepause a").off();
                 $("#gameend").css("display","none");
-                this.init();
+                clearInterval(this.config.runtimer);
+                clearInterval(this.config.changeAngletimer);
+                this.config.rollspeed = 5;
+                this.config.totaltime = 0;
+                this.config.speedbool = false;
+                this.initgame();
             }.bind(this));    
             
         },
@@ -109,8 +123,10 @@
             //var text = this.config.changeAngleText;
             var obj = $("header ol li").eq(1);
             var text = obj.text();
+            var timeobj = $("header ol li").eq(0);
             //obj.text(text);
             this.config.changeAngletimer = setInterval(function(){
+                timeobj.text(++this.config.totaltime);
                 text--;
                 if(text == 0) {
                     this.speed(true);
@@ -219,14 +235,18 @@
                 if($(item).data("color") !== "color-end") bool = true;
             });
             if(!bool){
+                localStorage.setItem("thisitem",$("header ol li").eq(0).text());
+                if(!localStorage.getItem("maxitem") || parseInt(localStorage.getItem("maxitem")) < parseInt(localStorage.getItem("thisitem"))){
+                    localStorage.setItem("maxitem",$("header ol li").eq(0).text());
+                }
                 clearInterval(this.config.runtimer);
                 clearInterval(this.config.changeAngletimer);
                 $("#gameend").css("display","block");
 //              再来一局，提示信息
+                $("#gameend dd").eq(0).text(localStorage.getItem("maxitem")+" 秒");
+                $("#gameend dd").eq(1).text(localStorage.getItem("thisitem")+" 秒");
+                
             }
-        },
-        gamepause:function(){
-            
         },
         initcolor:function(){
             var that = this;

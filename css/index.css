@@ -3,8 +3,93 @@ body{
     padding: 0;
     width:100%;
     height:100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(242,234,218,0.8);
     position: absolute;
+}
+img{
+    border-style: none;
+    vertical-align: top;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    margin: 0;
+    padding: 0;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background: rgba(60,54,69,1.0);
+    color: rgba(255,255,255,0.9);
+}
+.profile{
+    height: 580px;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    margin: -290px 0 0 -250px;
+    position: absolute;
+    z-index: 99;
+    border: none;
+}
+.profile ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.profile .text{
+    height:480px;
+    background: rgba(60,54,69,1.0);
+    color: rgba(255,255,255,0.9);
+}
+.profile .text .readhead{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+}
+.profile .text .readlist{
+    padding: 40px 0;
+}
+.profile .text .readlist li{
+    height: 52px;
+    text-align: center;
+    line-height: 52px;
+    font-size: 20px;
+    box-sizing: border-box;
+    border-left: 4px solid rgba(34,143,189,1.0);
+    border-right: 4px solid rgba(34,143,189,1.0);
+}
+.profile .startbutton{
+    height:100px;
+}
+.profile .startbutton a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    background: rgba(34,143,189,1.0);
+    color: rgba(255,255,255,0.9);
+    font-size: 40px;
+    line-height: 100px;
+    text-align: center;
+}
+.profile .url{
+    position: absolute;
+    height: 480px;    
+    width: 100%;
+    left: 0;
+    top:100px;
+    background: rgba(60,54,69,1.0);
+    display: none;
+    z-index: 999;
+}
+.profile .url img{
+    display: block;
+    height: 300px;
+    width: 300px;
+    padding: 80px 100px;
 }
 .content{
     height: 580px;
@@ -14,7 +99,6 @@ body{
     margin: -290px 0 0 -250px;
     background: rgb(255,255,255);
     position: absolute;
-    display: none;
 }
 .head{
     height: 40px;
@@ -48,19 +132,23 @@ ol li{
 }
 .foot ol li:nth-of-type(2){
     width:15%;
+    border-left: none;
 }
 .foot ol li:nth-of-type(3){
     width:15%;
+    border-left: none;
 }
 .foot ol li:nth-of-type(4){
     width:15%;
+    border-left: none;
 }
 .foot a{
     text-decoration: none;
-    color:black;
+    color: rgba(255,255,255,0.9);
     display: inline-block;
     width: 100%;
     height:100%;
+    background: rgba(60,54,69,0.9);
 }
 .main{
     height: 500px;
@@ -176,14 +264,15 @@ ol li{
     height: 100px;
     text-align: center;
     line-height: 100px;
+    color: rgba(255,255,255,0.9);
+    font-size: 22px;
+    background: rgba(60,54,69,0.9);
 }
 #gameend dt{
     width:25%;
-    background: red;
 }
 #gameend dd{
     width:75%;
-    background: blue;
 }
 #gameend .endbutton{
     text-decoration: none;
@@ -191,7 +280,11 @@ ol li{
     height: 100px;
     line-height: 100px;
     width: 100%;
+    color: rgba(255,255,255,0.9);
     text-align: center;
+    font-size: 22px;
+    background: ;
+    background: rgba(34,143,189,0.9);
 }
 #gamepause{
     position: absolute;
@@ -200,7 +293,6 @@ ol li{
     width: 500px;
     height: 580px;
     z-index:99;
-   
     display: none;
 }
 #gamepause .pausebutton{
