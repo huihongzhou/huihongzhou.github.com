@@ -20,16 +20,16 @@
         },
         init:function(){
 //            判断操作环境
-            if(this.ismoblie()){
+//            if(this.ismoblie()){
                 $(".startbutton a").click(function(event){
                 $(".profile").css("display","none");
                 $(".profile").css("z-index","-1");
                 $(".content").css("z-index","100");
                 this.initgame();
                 }.bind(this));
-            }else{
-                $(".profile .url").css("display","block");
-            }
+//            }else{
+//                $(".profile .url").css("display","block");
+//            }
         },
         initgame : function(){
 //           初始小球           
@@ -256,6 +256,7 @@
                 $(item).css("background",that.config.color[colorString]);
                 $(item).data("color",colorString);
             });
+//            模拟数据
 //            $(".main ul li").each(function(i,item){
 //               
 //                var colorString = "color-end";
