@@ -20,16 +20,16 @@
         },
         init:function(){
 //            判断操作环境
-//            if(this.ismoblie()){
+            if(this.ismoblie()){
                 $(".startbutton a").click(function(event){
                 $(".profile").css("display","none");
                 $(".profile").css("z-index","-1");
                 $(".content").css("z-index","100");
                 this.initgame();
                 }.bind(this));
-//            }else{
-//                $(".profile .url").css("display","block");
-//            }
+            }else{
+                $(".profile .url").css("display","block");
+            }
         },
         initgame : function(){
 //           初始小球           
@@ -150,9 +150,9 @@
                 speedy = roll.data("speedy");               
                 rollcolor = roll.data("color");
 //            碰撞上边
-                if((top+speedy) < 80){ 
-                    top = 80; roll.data("speedy",-speedy);
-                    obj = $(".c"+(Math.floor((left+20)/80)+1));
+                if((top+speedy) < 100){ 
+                    top = 100; roll.data("speedy",-speedy);
+                    obj = $(".c"+(Math.floor((left+25)/100)+1));
                     objcolor = obj.data("color");
                     
                     if( rollcolor !== "color-end"){
@@ -170,9 +170,9 @@
                     roll.css("background",this.config.color[objcolor]);      
                 }else{ top = top + speedy}
 //            碰撞下边
-                if((top+speedy) > 280){ 
-                    top = 280; roll.data("speedy",-speedy);
-                    obj = $(".c"+(13 - Math.floor((left+20)/80)));   
+                if((top+speedy) > 350){ 
+                    top = 350; roll.data("speedy",-speedy);
+                    obj = $(".c"+(13 - Math.floor((left+25)/100)));   
                     objcolor = obj.data("color");
                     if(roll.data("color") !== "color-end"){
                         if(objcolor == "color-end"){
@@ -188,9 +188,9 @@
                     roll.css("background",this.config.color[objcolor]);    
                 }else{ top = top + speedy}
 //            碰撞左边
-                if((left+speedx) < 80){ 
-                    left = 80; roll.data("speedx",-speedx);
-                    obj = $(".c"+(17 - Math.floor((top+20)/80)));
+                if((left+speedx) < 100){ 
+                    left = 100; roll.data("speedx",-speedx);
+                    obj = $(".c"+(17 - Math.floor((top+25)/100)));
                     objcolor = obj.data("color");
                     if(roll.data("color") !== "color-end"){
                         if(objcolor == "color-end"){
@@ -206,9 +206,9 @@
                     roll.css("background",this.config.color[objcolor]);   
                 }else{ left = left + speedx}
 //            碰撞右边
-                if((left+speedx) > 280){ 
-                    left = 280; roll.data("speedx",-speedx);
-                    obj = $(".c"+(5 + Math.floor((top+20)/80)));
+                if((left+speedx) > 350){ 
+                    left = 350; roll.data("speedx",-speedx);
+                    obj = $(".c"+(5 + Math.floor((top+25)/100)));
                     objcolor = obj.data("color");
                     if(roll.data("color") !== "color-end"){
                         if(objcolor == "color-end"){
