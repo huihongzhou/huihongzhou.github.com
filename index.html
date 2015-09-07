@@ -2,36 +2,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>huihongzhou</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="./bower_components/normalize.css/normalize.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
-<style>
-    body{
-        padding: 0;
-        margin: 0;
-        background-color: aquamarine;
-/*        overflow: scroll;*/
-    }
-    div{
-        
-    }
-    .main{
-        padding: 0;
-        position: absolute;
-        width: 400px;
-        height: 580px;
-        left: 50%;
-        top: 50%;
-        margin: -290px 0 0 -200px;
-        background-color: bisque;
-/*
-        border-left: 4px solid red;
-        border-right: 4px solid red;
-*/
-    }
-</style>
 <body>
-    <div class="main"></div>    
+    <div class="content">
+        <header class="head">
+            <nav>
+                <ol>
+                   <li>0</li>
+                   <li>倒计时</li> 
+                </ol>
+            </nav>
+        </header>
+        <section class="main">
+            <ul>
+                <li class="c1" data-index="1"></li>
+                <li class="c2" data-index="2"></li>
+                <li class="c3" data-index="3"></li>
+                <li class="c4" data-index="4"></li>
+                <li class="c5" data-index="5"></li>
+                <li class="c6" data-index="6"></li>
+                <li class="c7" data-index="7"></li>
+                <li class="c8" data-index="8"></li>
+                <li class="c9" data-index="9"></li>
+                <li class="c10" data-index="10"></li>
+                <li class="c11" data-index="11"></li>
+                <li class="c12" data-index="12"></li>
+                <li class="c13" data-index="13"></li>
+                <li class="c14" data-index="14"></li>
+                <li class="c15" data-index="15"></li>
+                <li class="c16" data-index="16"></li>
+            </ul>
+            <div id="roll"></div>
+        </section>
+        <footer class="foot">
+            <nav>
+                <ol>
+                    <li>小球速度调节</li>
+                    <li><a href="javascript:;" >变大</a></li>
+                    <li><a href="javascript:;" >变小</a></li>
+                    <li><a href="javascript:;" class="pausebutton">暂停</a></li> 
+                </ol>
+            </nav>
+        </footer>
+        <div id="gameend">
+            <dl>
+                <dt>最高纪录</dt>
+                <dd></dd>
+                <dt>本次纪录</dt>
+                <dd></dd>
+            </dl>
+            <a href="javascript:;" class="endbutton">再来一次</a>
+        </div>
+        <div id="gamepause">
+            <a href="javascript:;" class="pausebutton">继续</a>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="text">
+            <h1>嘻嘻球</h1>
+            <p class="readhead">
+                玩法介绍
+            </p>
+            <ul class="readlist">
+                <li>小球每过10秒方向会改变</li>
+                <li>小球如果无色会吸取被碰到方块的颜色</li>
+                <li>小球如果与被碰到方块的颜色相同则都变白色</li>
+                <li>方块能用手指移动</li>
+                <li>当方块颜色都变无色则游戏结束</li>
+            </ul>
+        </div>
+        <div class="startbutton">
+            <a href="javascript:;">开始游戏</a>
+        </div>
+        <div class="url">
+            <img src="./img/code.png" alt="移动端二维码" />
+        </div>
+    </div>
+    
+    <script src="./bower_components/touch/touch.js"></script>
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>

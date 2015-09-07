@@ -55,6 +55,8 @@ h1{
     line-height: 52px;
     font-size: 20px;
     box-sizing: border-box;
+    -moz-box-sizing:border-box; 
+    -webkit-box-sizing:border-box; 
     border-left: 4px solid rgba(34,143,189,1.0);
     border-right: 4px solid rgba(34,143,189,1.0);
 }
@@ -114,6 +116,8 @@ ol li{
     float: left;   
     height: 40px;
     box-sizing: border-box;
+    -moz-box-sizing:border-box; 
+    -webkit-box-sizing:border-box; 
     border-left: 4px green solid;
     line-height: 40px;
     font-size: 24px;
@@ -171,6 +175,8 @@ ol li{
     width:100px;
     height: 100px;
     box-sizing: border-box;
+    -moz-box-sizing:border-box; 
+    -webkit-box-sizing:border-box; 
     transition: all 0.05s linear;
 }
 .main ul li.c1{
