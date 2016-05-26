@@ -1,10 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>share</title>
-</head>
-<body>
-    <div>123</div>
-</body>
+<!doctype html>
+<html>
+    <head>
+        <title>WildDog WebRTC Demo</title>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        
+    </head>
+    <body>
+        <header>
+            <div id="heading">
+                <h2>Simple WebRTC Example</h2>
+            </div>
+            <div id="owr-logo"></div>
+        </header>
+        <section id="main-section">
+            <div id="settings-container">
+				AppId: <input type="text" id="appid_txt" value="" size="10">
+				</br>
+                Room id: <input type="text" id="roomid_txt" value="" size="10">
+				</br>
+                
+                <input type="checkbox" id="audio_cb">Audio
+                <input type="checkbox" id="video_cb" checked>Video<br>
+			<!--	<input class="btn" type="button" id="create_but" value="Join" disabled> -->
+			 <button class="btn" id="join_but">Join</button>
+            </div>
+            <div id="video-container">
+                <video id="self_view" class="shadow" autoplay muted></video>
+            </div>
+            <div id="log_div"></div>
+        </section>
+        <footer>
+            Copyright WildDog 2016
+        </footer>
+		<script src="adapter.js"></script>
+		<script src="main.js"></script>
+		<script src="https://cdn.wilddog.com/js/client/current/wilddog.js"></script>
+    </body>
 </html>
