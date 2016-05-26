@@ -26,8 +26,8 @@ window.onload = function() {
     audioCheckBox = document.getElementById("audio_cb");
     videoCheckBox = document.getElementById("video_cb");
     room_text = document.getElementById("roomid_txt");
-    // appid_text = document.getElementById("appid_txt");
-    appid_text = 'p2pv-01';
+    appid_text = document.getElementById("appid_txt");
+    // appid_text = 'p2pv-01';
     joinButton.onclick = function(evt) {
         //检查是否所有的输入项都满足
         if (false == runCheck()) {
